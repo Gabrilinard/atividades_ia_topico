@@ -52,6 +52,10 @@ O script irá:
 
 Após rodar `atividade01.py` (e abrir a janela do heatmap), abra um novo terminal e então execute o teste. Em alguns ambientes, a janela gráfica mantém o processo ocupado até ser fechada.
 
+```bash
+cd atividades_ia_topico
+```
+
 Para validar a implementação com um exemplo numérico simples, execute:
 
 ```bash
