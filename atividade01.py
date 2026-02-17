@@ -5,16 +5,28 @@ def funcao_softmax(valores, eixo=-1):
     expoentes = np.exp(valores)
     return expoentes / np.sum(expoentes, axis=eixo, keepdims=True)
 
+def atencao_produto_escalar_escalonado(entradas, pesos_consulta, pesos_chave, pesos_valor):
+    consultas = np.matmul(entradas, pesos_consulta)
+    chaves = np.matmul(entradas, pesos_chave)
+    valores = np.matmul(entradas, pesos_valor)
+
+    dimensao_chaves = consultas.shape[-1]
+    scores = np.matmul(consultas, np.swapaxes(chaves, -2, -1))
+    scores = scores / np.sqrt(dimensao_chaves)
+    pesos_atencao = funcao_softmax(escores, eixo=-1)
+    saida = np.matmul(pesos_atencao, valores)
+    return saida, pesos_atencao
+
 dimensao_modelo = 10
 tamanho_sequencia = 10
 dados_entrada = np.random.randn(1, tamanho_sequencia, dimensao_modelo)
 
-pesos_q = np.random.randn(dimensao_modelo, dimensao_modelo)
-pesos_k = np.random.randn(dimensao_modelo, dimensao_modelo)
-pesos_v = np.random.randn(dimensao_modelo, dimensao_modelo)
+pesos_consulta = np.random.randn(dimensao_modelo, dimensao_modelo)
+pesos_chave = np.random.randn(dimensao_modelo, dimensao_modelo)
+pesos_valor = np.random.randn(dimensao_modelo, dimensao_modelo)
 
-query = np.matmul(dados_entrada, pesos_q)
-chaves = np.matmul(dados_entrada, pesos_k)
-valores = np.matmul(dados_entrada, pesos_v)
+representacao_vetorial, pesos_atencao = atencao_produto_escalar_escalonado(
+    dados_entrada, pesos_consulta, pesos_chave, pesos_valor
+)
 
-print(query.shape, chaves.shape, valores.shape)
+print(representacao_vetorial.shape, pesos_atencao.shape)
