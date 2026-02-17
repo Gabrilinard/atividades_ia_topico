@@ -12,6 +12,13 @@ Este repositório contém a implementação manual do mecanismo de **Scaled Dot-
 
 ## 1. Como rodar o código
 
+### 1.0. Clonar o repositório e entrar na pasta
+
+```bash
+git clone https://github.com/Gabrilinard/atividades_ia_topico.git
+cd atividades_ia_topico
+```
+
 ### 1.1. Instalar dependências
 
 Requisitos principais:
