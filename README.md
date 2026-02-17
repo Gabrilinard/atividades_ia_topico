@@ -10,9 +10,19 @@ Este repositório contém a implementação manual do mecanismo de **Scaled Dot-
 
 ---
 
+## 0. Preparar ambiente (caso não tenha nada instalado)
+
+1. Instale Python 3.x a partir de https://www.python.org/ (no Windows marque a opção de adicionar o Python ao PATH).
+2. (Opcional, mas recomendado) Instale o Git a partir de https://git-scm.com/downloads. Se não quiser usar Git, você pode baixar o repositório como arquivo .zip pelo GitHub.
+3. Abra um terminal (Prompt de Comando, PowerShell ou equivalente) na pasta onde deseja salvar o projeto.
+
+Depois disso, siga para a próxima seção.
+
 ## 1. Como rodar o código
 
 ### 1.0. Clonar o repositório e entrar na pasta
+
+Crie uma pasta nova e abra essa pasta na sua IDE. Após isso execute os comandos:
 
 ```bash
 git clone https://github.com/Gabrilinard/atividades_ia_topico.git
