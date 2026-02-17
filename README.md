@@ -58,6 +58,8 @@ Para validar a implementação com um exemplo numérico simples, execute:
 python test_attention.py
 ```
 
+Após isso, feche a janela de matriz/heatmap que abrir durante o teste para ver os prints no terminal para ver se o teste passou (por exemplo, a mensagem `Teste de atenção com exemplo numérico simples passou!!!`). Em alguns ambientes, a janela gráfica bloqueia o console até ser fechada.
+
 O teste:
 
 - Monta um exemplo pequeno (dimensão 2, sequência de 2 elementos).
