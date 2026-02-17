@@ -3,7 +3,6 @@ from atividade01 import MecanismoAtencao
 
 def executar_teste_simples():
     dimensao_modelo = 2
-    tamanho_sequencia = 2
 
     dados_entrada = np.array([[[1.0, 2.0],
                                [3.0, 4.0]]])
