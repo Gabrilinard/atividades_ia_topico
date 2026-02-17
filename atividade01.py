@@ -34,8 +34,15 @@ mecanismo_atencao = MecanismoAtencao(dimensao_modelo)
 representacao_vetorial, pesos_atencao = mecanismo_atencao.calcular_atencao(dados_entrada)
 
 plt.figure(figsize=(10, 8))
-sns.heatmap(pesos_atencao[0], annot=True, cmap='viridis')
+ax = sns.heatmap(pesos_atencao[0], annot=False, cmap="viridis")
+matriz = pesos_atencao[0]
+for i in range(matriz.shape[0]):
+    for j in range(matriz.shape[1]):
+        texto = f"{matriz[i, j]:.3f}" if matriz[i, j] >= 1e-3 else f"{matriz[i, j]:.2e}"
+        cor = "black" if matriz[i, j] > 0.5 else "white"
+        ax.text(j + 0.5, i + 0.5, texto, ha="center", va="center", color=cor, fontsize=8)
 plt.title("Heatmap de Pesos")
 plt.xlabel("Posição das Chaves")
 plt.ylabel("Posição das Consultas")
+plt.tight_layout()
 plt.show()
