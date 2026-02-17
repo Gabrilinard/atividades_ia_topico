@@ -189,3 +189,8 @@ Teste de atenção com exemplo numérico simples passou!!!
 Esse exemplo demonstra, de forma transparente, que o código implementa corretamente a equação de atenção:
 
 `ATTENTION(Q, K, V) = softmax((Q K^T) / sqrt(d_k)) * V`
+
+## Nota de Integridade e Créditos
+Este trabalho seguiu rigorosamente as diretrizes de integridade do laboratório:
+
+Uso de IA: Ferramentas de IA Generativa (Gemini/ChatGPT) foram consultadas exclusivamente para suporte em sintaxe da biblioteca numpy e para auxílio na estruturação deste documento explicativo (revisado por mim). Elas auxiliaram na resolução de dúvidas de sintaxe da biblioteca numpy e no brainstorming para a estruturação lógica em pequenas partes do código, dúvidas mesmo. Mas toda a implementação foi eu tentando fazer a mão e entender cada parte do código, fazendo com que ficasse de acordo com o que foi pedido no laboratório. A documentação foI revisada e validada por mim, garantindo que o trabalho reflita meu entendimento sobre o funcionamento do Encoder Transformer, conforme as regras do contrato pedagógico.
